@@ -1,5 +1,6 @@
 package game;
 
+import java.util.Scanner;
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -12,7 +13,48 @@ public class Sketch extends PApplet {
 
     @Override
     public void setup() {
-        
+        Scanner sc = new Scanner(System.in);
+        // Temperatura, Frecuencia, Amplitud de Desplazamiento, Densidad.
+        int temp, frec, ampd_desp, densidad;
+        String usuario[] = new String[5];
+        for (int i = 0; i < 5; i++) {
+                switch (i) {
+                    case 0: // Nombre de Usuario.
+                        System.out.print("Digite su nombre: ");
+                        usuario[i] = sc.next();
+                        break;
+                    case 1:
+                        System.out.print("Digite la temperatura (10-37) Grados Celsius: ");
+                        usuario[i] = Integer.toString(temp = sc.nextInt());
+                        while (temp < 10 || temp > 37) {
+                            System.out.println("La temperatura debe ser entre 10 y 37 grados: ");
+                            System.out.print("Digitela de nuevo: ");
+                            usuario[i] = Integer.toString(temp = sc.nextInt());
+                        }
+                        break;
+                    case 2:
+                        System.out.print("Digite la frecuencia (20-20000)Hz: ");
+                        usuario[i] = Integer.toString(frec = sc.nextInt());
+                        while (frec < 20 || frec > 20000) {
+                            System.out.println("La frecuencia debe ser entre 20Hz y 20000Hz: ");
+                            System.out.print("Digitela de nuevo: ");
+                            usuario[i] = Integer.toString(frec = sc.nextInt());
+                        }
+                        break;
+                    case 3:
+                        System.out.print("Digite la Amplitud de Desplazamiento: ");
+                        usuario[i] = Integer.toString(ampd_desp = sc.nextInt());                       
+                        break;
+                    case 4:
+                        System.out.println("Densidad");
+                        break;
+                }            
+            System.out.println("");
+        }
+        for (int i = 0; i < 5; i++) {
+                System.out.println(usuario[i]);
+            }
+            System.out.println("");
     }
 
     int red_darker_rectX = 100, red_mid_recY = 195, red_lighter_rectY = 335, red_mid_recX = 100;
