@@ -92,7 +92,11 @@ public class Sketch extends PApplet {
 
         fill(255);
         image(ear, 155, 165, 150, 150);
-        
+
+        textSize(50);
+        text("Título", 250, 90);
+        textSize(20);
+        text("Nombre", 390, 220);
     }
 
     public void run() {
