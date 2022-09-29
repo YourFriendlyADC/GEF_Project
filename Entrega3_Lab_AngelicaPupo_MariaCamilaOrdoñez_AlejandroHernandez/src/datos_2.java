@@ -2,23 +2,24 @@
  *
  * @author Victor1
  */
+import javax.swing.JComponent;
 public class datos_2 extends javax.swing.JFrame {
+    
 
-    String density;
+//    String density;
     /**
      * Creates new form datos_2
      */
-    public datos_2(String density) {
+    public datos_2() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.density = density;
-        temp.setText(density);
-        panel_datos_2.add(density);
+//        this.density = density;
+//        temp.setText(density);
+        //panel_datos_2.add(density);
+//        datos_1 men = new datos_1();
+//        dns2.setText(men.densidad);
     }
 
-    private datos_2() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -31,27 +32,16 @@ public class datos_2 extends javax.swing.JFrame {
 
         panel_datos_2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jLabel3 = new javax.swing.JLabel();
         temp = new javax.swing.JLabel();
-        temp2 = new javax.swing.JTextField();
+        dns2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel_datos_2.setBackground(new java.awt.Color(227, 236, 243));
+        panel_datos_2.setBackground(new java.awt.Color(215, 227, 252));
 
         jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 24)); // NOI18N
         jLabel1.setText("DATOS 2");
-
-        jLabel2.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
-        jLabel2.setText("Inserte Longitud de Onda");
-
-        jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.1 x 10^-8", "0.2 x 10^-8", "0.3 x 10^-8", "0.4 x 10^-8", "0.5 x 10^-8", "0.6 x 10^-8", "0.7 x 10^-8", "0.8 x 10^-8", "0.9 x 10^-8", "1 x 10^-8", "1.1 x 10^-8", "1.2 x 10^-8", "1.3 x 10^-8", "1.4 x 10^-8", "1.5 x 10^-8", "1.6 x 10^-8", "1.7 x 10^-8", "1.8 x 10^-8", "1.9 x 10^-8", "2 x 10^-8" }));
-        jComboBox1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel3.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
         jLabel3.setText("Densidad: ");
@@ -67,21 +57,15 @@ public class datos_2 extends javax.swing.JFrame {
                     .addGroup(panel_datos_2Layout.createSequentialGroup()
                         .addGap(269, 269, 269)
                         .addComponent(jLabel1))
-                    .addGroup(panel_datos_2Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(panel_datos_2Layout.createSequentialGroup()
                             .addContainerGap()
-                            .addComponent(temp2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_datos_2Layout.createSequentialGroup()
                             .addGap(55, 55, 55)
-                            .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(panel_datos_2Layout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jLabel2)))))
+                            .addComponent(jLabel3)
+                            .addGap(18, 18, 18)
+                            .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(279, Short.MAX_VALUE))
         );
         panel_datos_2Layout.setVerticalGroup(
@@ -89,16 +73,12 @@ public class datos_2 extends javax.swing.JFrame {
             .addGroup(panel_datos_2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(54, 54, 54)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
+                .addGap(179, 179, 179)
                 .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(temp2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(149, Short.MAX_VALUE))
         );
 
@@ -152,13 +132,11 @@ public class datos_2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JTextField dns2;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel panel_datos_2;
     private javax.swing.JLabel temp;
-    private javax.swing.JTextField temp2;
     // End of variables declaration//GEN-END:variables
 
     private void setText(String temperatura) {

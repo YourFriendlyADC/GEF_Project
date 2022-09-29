@@ -25,13 +25,14 @@ public class menu extends javax.swing.JFrame {
         // Imagen del menú
         ImageIcon img = new ImageIcon("images/ear.png");
         JLabel tag2 = new JLabel();
-        tag2.setBounds(40, 0, 500, 500);
-        tag2.setIcon(new ImageIcon(img.getImage().getScaledInstance(300, 300, Image.SCALE_SMOOTH)));
+        tag2.setBounds(170, -60, 500, 500);
+        tag2.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
         panel_menu.add(tag2);
         
 //        Graphics g = new Graphics();
 //        g.drawLine(320, 0, 320, 480);
     }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -44,14 +45,16 @@ public class menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        archivos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panel_menu.setBackground(new java.awt.Color(227, 236, 243));
+        panel_menu.setBackground(new java.awt.Color(215, 227, 252));
+        panel_menu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 50)));
 
         to_datos_1.setBackground(new java.awt.Color(118, 158, 219));
         to_datos_1.setForeground(new java.awt.Color(255, 255, 255));
-        to_datos_1.setText("Siguiente");
+        to_datos_1.setText("Entrar");
         to_datos_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 to_datos_1ActionPerformed(evt);
@@ -86,25 +89,38 @@ public class menu extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 102));
         jLabel3.setText("Inserte su nombre ");
 
+        archivos.setBackground(new java.awt.Color(118, 158, 219));
+        archivos.setForeground(new java.awt.Color(255, 255, 255));
+        archivos.setText("Archivos");
+
         javax.swing.GroupLayout panel_menuLayout = new javax.swing.GroupLayout(panel_menu);
         panel_menu.setLayout(panel_menuLayout);
         panel_menuLayout.setHorizontalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_menuLayout.createSequentialGroup()
-                .addGap(279, 279, 279)
-                .addComponent(jLabel1)
-                .addGap(0, 267, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panel_menuLayout.createSequentialGroup()
+                .addContainerGap(238, Short.MAX_VALUE)
+                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
+                        .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(236, 236, 236))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addGap(11, 11, 11))
-                    .addComponent(salir))
-                .addGap(18, 18, 18)
-                .addComponent(to_datos_1)
-                .addGap(30, 30, 30))
+                        .addGap(245, 245, 245))))
+            .addGroup(panel_menuLayout.createSequentialGroup()
+                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_menuLayout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(jLabel1))
+                    .addGroup(panel_menuLayout.createSequentialGroup()
+                        .addGap(282, 282, 282)
+                        .addComponent(to_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(archivos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(salir)
+                .addGap(22, 22, 22))
             .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_menuLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -114,17 +130,19 @@ public class menu extends javax.swing.JFrame {
         panel_menuLayout.setVerticalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(48, 48, 48)
                 .addComponent(jLabel1)
-                .addGap(122, 122, 122)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(to_datos_1)
+                .addGap(50, 50, 50)
                 .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(to_datos_1)
-                    .addComponent(salir))
-                .addGap(23, 23, 23))
+                    .addComponent(salir)
+                    .addComponent(archivos))
+                .addGap(16, 16, 16))
             .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_menuLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -212,6 +230,7 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton archivos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
