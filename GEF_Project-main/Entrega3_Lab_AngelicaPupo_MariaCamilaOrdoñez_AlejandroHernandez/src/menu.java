@@ -20,19 +20,25 @@ public class menu extends javax.swing.JFrame {
 
     public menu() {
         initComponents();
-        // Posición de la ventana
+
+        // Personalización de Ventana
+        // Posición
         this.setLocationRelativeTo(null);
-        // Imagen del menú
+        // Imagen de Oído
         ImageIcon img = new ImageIcon("images/ear.png");
-        JLabel tag2 = new JLabel();
-        tag2.setBounds(170, -60, 500, 500);
-        tag2.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
-        panel_menu.add(tag2);
-        
+        JLabel ear = new JLabel();
+        ear.setBounds(170, -60, 500, 500);
+        ear.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
+        panel_menu.add(ear);
+        // Título
+        this.setTitle("Menú");
+        // Icono
+        ImageIcon img_2 = new ImageIcon("images/bee.png");
+        setIconImage(img_2.getImage());
+
 //        Graphics g = new Graphics();
 //        g.drawLine(320, 0, 320, 480);
     }
-    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -50,7 +56,11 @@ public class menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panel_menu.setBackground(new java.awt.Color(215, 227, 252));
-        panel_menu.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 50)));
+        panel_menu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                panel_menuMouseEntered(evt);
+            }
+        });
 
         to_datos_1.setBackground(new java.awt.Color(118, 158, 219));
         to_datos_1.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,15 +107,6 @@ public class menu extends javax.swing.JFrame {
         panel_menu.setLayout(panel_menuLayout);
         panel_menuLayout.setHorizontalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                .addContainerGap(238, Short.MAX_VALUE)
-                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                        .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(236, 236, 236))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(245, 245, 245))))
             .addGroup(panel_menuLayout.createSequentialGroup()
                 .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_menuLayout.createSequentialGroup()
@@ -121,6 +122,12 @@ public class menu extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(salir)
                 .addGap(22, 22, 22))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
+                .addContainerGap(249, Short.MAX_VALUE)
+                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(236, 236, 236))
             .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_menuLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -132,7 +139,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
                 .addGap(48, 48, 48)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -170,13 +177,13 @@ public class menu extends javax.swing.JFrame {
 
     private void to_datos_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to_datos_1ActionPerformed
         datos_1 d_1 = new datos_1(usuario.getText());
-//        new datos_1().setVisible(true);
         String user = usuario.getText();
-        if (user == "") {
-            this.setVisible(true);            
+        if (validacion_nombre(user) == false) {
+            System.out.println("no disponible");
+            this.setVisible(true);
             d_1.setVisible(false);
         } else {
-            this.setVisible(false);            
+            this.setVisible(false);
             d_1.setVisible(true);
         }
         System.out.println(user);
@@ -193,6 +200,10 @@ public class menu extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_usuarioActionPerformed
+
+    private void panel_menuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_menuMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_panel_menuMouseEntered
 
     /**
      * @param args the command line arguments
@@ -248,4 +259,31 @@ public class menu extends javax.swing.JFrame {
 //            g.drawImage(imagen, 300, 400, 200, 400, this);
 //        }
 //    }
+    public static boolean validacion_nombre(String user) {
+        boolean pase = false;
+        int i = 0;
+        if ("".equals(user) || " ".equals(user)) {
+            pase = false;
+        } else {
+            if (user.length() > 2) {
+                while (pase == false || i >= user.length() - 1) {
+                    System.out.println("ciclo " + i);
+                    if (user == "  ") {
+                        System.out.println("3 vacios"); // Arreglar
+                    }
+                    if (user.substring(i, i + 1) == " ") {
+                        pase = false;
+                    } else {
+                        if (user.substring(i, i + 1) != " ") {
+                            System.out.println(user.substring(i, i + 1));
+                            System.out.println("longitud: " + user.length());
+                            pase = true;
+                        }
+                    }
+                }
+            } // !" ".equals(user.substring(i, i + 1))
+        }
+        return pase;
+    }
+
 }

@@ -23,6 +23,11 @@ public class datos_1 extends javax.swing.JFrame {
         saludo.setText("Hola, " + user + "!");
         saludo.setBounds(280, 20, 300, 40);
         panel_datos_1.add(saludo);
+        
+        this.setTitle("Introducir datos");
+        
+        ImageIcon img2 = new ImageIcon("images/bee.png");
+        setIconImage(img2.getImage());
 //         ImageIcon img = new ImageIcon("images/termometro.png");
 //        JLabel tag2 = new JLabel();
 //        tag2.setBounds(100, 100, 80, 100);
@@ -63,10 +68,12 @@ public class datos_1 extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jSeparator2 = new javax.swing.JSeparator();
         aviso5 = new javax.swing.JLabel();
+        atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panel_datos_1.setBackground(new java.awt.Color(215, 227, 252));
+        panel_datos_1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         saludo.setBackground(new java.awt.Color(0, 0, 0));
         saludo.setFont(new java.awt.Font("Sitka Display", 1, 24)); // NOI18N
@@ -131,102 +138,100 @@ public class datos_1 extends javax.swing.JFrame {
         jLabel7.setText("Inserte Longitud de Onda");
 
         jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
+        jComboBox1.setEditable(true);
         jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.1 x 10^-8", "0.2 x 10^-8", "0.3 x 10^-8", "0.4 x 10^-8", "0.5 x 10^-8", "0.6 x 10^-8", "0.7 x 10^-8", "0.8 x 10^-8", "0.9 x 10^-8", "1 x 10^-8", "1.1 x 10^-8", "1.2 x 10^-8", "1.3 x 10^-8", "1.4 x 10^-8", "1.5 x 10^-8", "1.6 x 10^-8", "1.7 x 10^-8", "1.8 x 10^-8", "1.9 x 10^-8", "2 x 10^-8" }));
-        jComboBox1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox1.setAutoscrolls(true);
+        jComboBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 204), 1, true));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox1.setName("Rango"); // NOI18N
+        jComboBox1.setOpaque(true);
 
         jSeparator2.setBackground(new java.awt.Color(51, 153, 255));
         jSeparator2.setForeground(new java.awt.Color(0, 102, 255));
+
+        atras.setBackground(new java.awt.Color(118, 158, 219));
+        atras.setForeground(new java.awt.Color(255, 255, 255));
+        atras.setText("Atrás");
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_datos_1Layout = new javax.swing.GroupLayout(panel_datos_1);
         panel_datos_1.setLayout(panel_datos_1Layout);
         panel_datos_1Layout.setHorizontalGroup(
             panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_datos_1Layout.createSequentialGroup()
-                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(270, 270, 270)
-                        .addComponent(aviso, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(temperatura))
-                                .addGap(46, 46, 46))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addGap(80, 80, 80))))
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(aviso_temp, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jLabel5)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(70, 70, 70)
+                .addComponent(aviso_frec, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(17, 17, 17)
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                         .addComponent(aviso_2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(201, 201, 201))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(aviso_temp, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(91, 91, 91))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                .addComponent(atras)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(272, 272, 272))))
-            .addGroup(panel_datos_1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                                .addGap(207, 207, 207)
-                                .addComponent(saludo))
-                            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                                .addGap(406, 406, 406)
-                                .addComponent(aviso_1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                                .addGap(250, 250, 250)
-                                .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(406, 406, 406)
+                        .addComponent(aviso_1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(frecuencia)))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(105, 105, 105)
+                        .addComponent(jLabel5))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(jLabel7)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jSeparator2)
+            .addComponent(jSeparator1)
+            .addGroup(panel_datos_1Layout.createSequentialGroup()
+                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(saludo)
+                    .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panel_datos_1Layout.createSequentialGroup()
+                            .addGap(270, 270, 270)
+                            .addComponent(aviso, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel_datos_1Layout.createSequentialGroup()
+                            .addGap(60, 60, 60)
+                            .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                                .addGap(201, 201, 201)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap())
-            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jSeparator1))
-            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(aviso_frec, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(temperatura))
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(80, 80, 80))))
         );
         panel_datos_1Layout.setVerticalGroup(
             panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_datos_1Layout.createSequentialGroup()
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
+                        .addGap(14, 14, 14)
                         .addComponent(saludo)
-                        .addGap(129, 129, 129)
+                        .addGap(142, 142, 142)
                         .addComponent(aviso))
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
                         .addGap(114, 114, 114)
@@ -238,8 +243,8 @@ public class datos_1 extends javax.swing.JFrame {
                         .addGap(10, 10, 10)
                         .addComponent(temperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(aviso_temp, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addComponent(aviso_temp)
+                .addGap(40, 40, 40)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
@@ -248,8 +253,8 @@ public class datos_1 extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(aviso_frec, javax.swing.GroupLayout.PREFERRED_SIZE, 11, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59)
+                .addComponent(aviso_frec)
+                .addGap(70, 70, 70)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel7)
@@ -259,9 +264,11 @@ public class datos_1 extends javax.swing.JFrame {
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(aviso_1)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(to_datos_2)
-                        .addGap(18, 18, 18)
+                        .addGap(57, 57, 57)
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(105, 105, 105)
                         .addComponent(aviso_2)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -274,7 +281,7 @@ public class datos_1 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_datos_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -303,7 +310,7 @@ public class datos_1 extends javax.swing.JFrame {
             pass_t = true;
         } else {
             aviso_temp.setText("Digite un valor entre el rango indicado.");
-            aviso_temp.setBounds(400, 220, 300, 10);
+            aviso_temp.setBounds(400, 220, 300, 20);
             aviso_temp.setBackground(Color.RED);
             panel_datos_1.add(aviso_temp);
         }
@@ -330,6 +337,8 @@ public class datos_1 extends javax.swing.JFrame {
             aviso_frec.setBackground(Color.RED);
             panel_datos_1.add(aviso_frec);
         }
+        
+        // Validacion de ambos
         if (pass_t == true & pass_f == true) {
             this.setVisible(false);
             d_2.setVisible(true);
@@ -346,6 +355,12 @@ public class datos_1 extends javax.swing.JFrame {
     private void temperaturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_temperaturaActionPerformed
 
     }//GEN-LAST:event_temperaturaActionPerformed
+
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        this.dispose();
+        menu panel_menu = new menu();
+        panel_menu.setVisible(true);
+    }//GEN-LAST:event_atrasActionPerformed
 
 //                        System.out.print("Digite la temperatura (10-37) Grados Celsius: ");
 //                        usuario[i][j] = Integer.toString(temp = sc.nextInt());
@@ -373,6 +388,7 @@ public class datos_1 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras;
     private javax.swing.JLabel aviso;
     private javax.swing.JLabel aviso5;
     private javax.swing.JLabel aviso_1;
@@ -394,9 +410,19 @@ public class datos_1 extends javax.swing.JFrame {
     private javax.swing.JButton to_datos_2;
     // End of variables declaration//GEN-END:variables
 
-    private static class density {
+    private static class panel_menu {
 
-        public density() {
+        public panel_menu() {
+        }
+
+        private void setVisible(boolean b) {
+            
         }
     }
+
+//    private static class density {
+//
+//        public density() {
+//        }
+//    }
 }

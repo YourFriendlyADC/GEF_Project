@@ -1,12 +1,15 @@
+
 /**
  *
  * @author Victor1
  */
+import javax.swing.ImageIcon;
 import javax.swing.JComponent;
+
 public class datos_2 extends javax.swing.JFrame {
-    
 
 //    String density;
+    
     /**
      * Creates new form datos_2
      */
@@ -18,8 +21,11 @@ public class datos_2 extends javax.swing.JFrame {
         //panel_datos_2.add(density);
 //        datos_1 men = new datos_1();
 //        dns2.setText(men.densidad);
+        this.setTitle("Muestra de datos");
+        
+        ImageIcon img2 = new ImageIcon("images/bee.png");
+        setIconImage(img2.getImage());
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -35,6 +41,7 @@ public class datos_2 extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         temp = new javax.swing.JLabel();
         dns2 = new javax.swing.JTextField();
+        atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,6 +54,16 @@ public class datos_2 extends javax.swing.JFrame {
         jLabel3.setText("Densidad: ");
 
         temp.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
+        temp.setText("density");
+
+        atras.setBackground(new java.awt.Color(118, 158, 219));
+        atras.setForeground(new java.awt.Color(255, 255, 255));
+        atras.setText("Inicio");
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panel_datos_2Layout = new javax.swing.GroupLayout(panel_datos_2);
         panel_datos_2.setLayout(panel_datos_2Layout);
@@ -57,29 +74,32 @@ public class datos_2 extends javax.swing.JFrame {
                     .addGroup(panel_datos_2Layout.createSequentialGroup()
                         .addGap(269, 269, 269)
                         .addComponent(jLabel1))
-                    .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(panel_datos_2Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panel_datos_2Layout.createSequentialGroup()
-                            .addGap(55, 55, 55)
-                            .addComponent(jLabel3)
-                            .addGap(18, 18, 18)
-                            .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(279, Short.MAX_VALUE))
+                    .addGroup(panel_datos_2Layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(182, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(21, 21, 21))
         );
         panel_datos_2Layout.setVerticalGroup(
             panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_datos_2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(179, 179, 179)
-                .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addGap(168, 168, 168)
+                .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
+                .addComponent(atras)
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -95,6 +115,12 @@ public class datos_2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+        this.dispose();
+        menu panel_menu = new menu();
+        panel_menu.setVisible(true);
+    }//GEN-LAST:event_atrasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -132,6 +158,7 @@ public class datos_2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton atras;
     private javax.swing.JTextField dns2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
