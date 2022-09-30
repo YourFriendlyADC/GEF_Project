@@ -1,13 +1,5 @@
-
 import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
 import java.awt.Image;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.image.ImageObserver;
-import java.text.AttributedCharacterIterator;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.lang.String;
@@ -22,22 +14,27 @@ public class menu extends javax.swing.JFrame {
         initComponents();
 
         // Personalización de Ventana
+        
         // Posición
         this.setLocationRelativeTo(null);
         // Imagen de Oído
-        ImageIcon img = new ImageIcon("images/ear.png");
-        JLabel ear = new JLabel();
-        ear.setBounds(170, -60, 500, 500);
-        ear.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
-        panel_menu.add(ear);
+        ImageIcon img = new ImageIcon("images/perezoso.png");
+        JLabel icon = new JLabel();
+        icon.setBounds(190, -60, 500, 500);
+        icon.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
+        panel_menu.add(icon);
         // Título
         this.setTitle("Menú");
         // Icono
         ImageIcon img_2 = new ImageIcon("images/bee.png");
         setIconImage(img_2.getImage());
-
-//        Graphics g = new Graphics();
-//        g.drawLine(320, 0, 320, 480);
+        // Items
+        ingrese_nombre.setBounds(250, 320, 160, 30);
+        panel_menu.add(ingrese_nombre);
+        usuario.setBounds(240, 350, 165, 30);
+        panel_menu.add(usuario);
+        to_datos_1.setBounds(285, 390, 80, 30);
+        panel_menu.add(to_datos_1);
     }
 
     @SuppressWarnings("unchecked")
@@ -49,9 +46,10 @@ public class menu extends javax.swing.JFrame {
         salir = new javax.swing.JButton();
         usuario = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        ingrese_nombre = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         archivos = new javax.swing.JButton();
+        aviso_nombre = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -68,6 +66,11 @@ public class menu extends javax.swing.JFrame {
         to_datos_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 to_datos_1ActionPerformed(evt);
+            }
+        });
+        to_datos_1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                to_datos_1KeyPressed(evt);
             }
         });
 
@@ -94,28 +97,21 @@ public class menu extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setText("Title TBC");
 
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel3.setText("Inserte su nombre ");
+        ingrese_nombre.setBackground(new java.awt.Color(0, 0, 0));
+        ingrese_nombre.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_nombre.setForeground(new java.awt.Color(0, 0, 102));
+        ingrese_nombre.setText("Ingrese su nombre ");
 
         archivos.setBackground(new java.awt.Color(118, 158, 219));
         archivos.setForeground(new java.awt.Color(255, 255, 255));
         archivos.setText("Archivos");
 
+        aviso_nombre.setForeground(new java.awt.Color(255, 0, 51));
+
         javax.swing.GroupLayout panel_menuLayout = new javax.swing.GroupLayout(panel_menu);
         panel_menu.setLayout(panel_menuLayout);
         panel_menuLayout.setHorizontalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_menuLayout.createSequentialGroup()
-                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panel_menuLayout.createSequentialGroup()
-                        .addGap(273, 273, 273)
-                        .addComponent(jLabel1))
-                    .addGroup(panel_menuLayout.createSequentialGroup()
-                        .addGap(282, 282, 282)
-                        .addComponent(to_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(archivos)
@@ -123,11 +119,24 @@ public class menu extends javax.swing.JFrame {
                 .addComponent(salir)
                 .addGap(22, 22, 22))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                .addContainerGap(249, Short.MAX_VALUE)
-                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(240, Short.MAX_VALUE)
+                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
+                        .addComponent(ingrese_nombre)
+                        .addGap(9, 9, 9)))
                 .addGap(236, 236, 236))
+            .addGroup(panel_menuLayout.createSequentialGroup()
+                .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_menuLayout.createSequentialGroup()
+                        .addGap(273, 273, 273)
+                        .addComponent(jLabel1))
+                    .addGroup(panel_menuLayout.createSequentialGroup()
+                        .addGap(282, 282, 282)
+                        .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(aviso_nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(to_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(panel_menuLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -137,15 +146,17 @@ public class menu extends javax.swing.JFrame {
         panel_menuLayout.setVerticalGroup(
             panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+                .addComponent(ingrese_nombre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(to_datos_1)
-                .addGap(50, 50, 50)
+                .addGap(25, 25, 25)
+                .addComponent(aviso_nombre)
+                .addGap(25, 25, 25)
                 .addGroup(panel_menuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(salir)
                     .addComponent(archivos))
@@ -179,14 +190,15 @@ public class menu extends javax.swing.JFrame {
         datos_1 d_1 = new datos_1(usuario.getText());
         String user = usuario.getText();
         if (validacion_nombre(user) == false) {
-            System.out.println("no disponible");
+            aviso_nombre.setText("Digite un nombre.");
+            aviso_nombre.setBounds(277, 430, 100, 20);
+            panel_menu.add(aviso_nombre);
             this.setVisible(true);
             d_1.setVisible(false);
         } else {
             this.setVisible(false);
             d_1.setVisible(true);
         }
-        System.out.println(user);
     }//GEN-LAST:event_to_datos_1ActionPerformed
 
     private void usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioActionPerformed
@@ -204,6 +216,21 @@ public class menu extends javax.swing.JFrame {
     private void panel_menuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_menuMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_panel_menuMouseEntered
+
+    private void to_datos_1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_to_datos_1KeyPressed
+        datos_1 d_1 = new datos_1(usuario.getText());
+        String user = usuario.getText();
+        if (validacion_nombre(user) == false) {
+            aviso_nombre.setText("Digite un nombre.");
+            aviso_nombre.setBounds(277, 410, 100, 20);
+            panel_menu.add(aviso_nombre);
+            this.setVisible(true);
+            d_1.setVisible(false);
+        } else {
+            this.setVisible(false);
+            d_1.setVisible(true);
+        }
+    }//GEN-LAST:event_to_datos_1KeyPressed
 
     /**
      * @param args the command line arguments
@@ -242,48 +269,40 @@ public class menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton archivos;
+    private javax.swing.JLabel aviso_nombre;
+    private javax.swing.JLabel ingrese_nombre;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel panel_menu;
     private javax.swing.JButton salir;
     public static javax.swing.JButton to_datos_1;
     public static javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 
-//    class imagen extends JPanel {
-//        private Image imagen;
-//        @Override
-//        public void paint(Graphics g) {
-//            imagen = new ImageIcon(getClass.getGraphics("images/spidey.png")) {};
-//            g.drawImage(imagen, 300, 400, 200, 400, this);
-//        }
-//    }
     public static boolean validacion_nombre(String user) {
         boolean pase = false;
         int i = 0;
-        if ("".equals(user) || " ".equals(user)) {
-            pase = false;
+        if (user.length() < 3) {
+            if ("".equals(user) || " ".equals(user)) {
+                pase = false;
+            } else {
+                pase = true;
+            }
         } else {
-            if (user.length() > 2) {
-                while (pase == false || i >= user.length() - 1) {
-                    System.out.println("ciclo " + i);
-                    if (user == "  ") {
-                        System.out.println("3 vacios"); // Arreglar
+            if (user.length() > 2){
+                while (pase == false && i < user.length()){                   
+                    if (user.substring(i, i + 1) != "") {
+                        pase = true;
                     }
-                    if (user.substring(i, i + 1) == " ") {
-                        pase = false;
-                    } else {
-                        if (user.substring(i, i + 1) != " ") {
-                            System.out.println(user.substring(i, i + 1));
-                            System.out.println("longitud: " + user.length());
-                            pase = true;
-                        }
-                    }
+                    i++;
                 }
-            } // !" ".equals(user.substring(i, i + 1))
+            }
         }
         return pase;
     }
 
+    public static boolean validacion_vulgaridad(String user) {
+        boolean groseria = false;
+        return groseria;
+    }
 }

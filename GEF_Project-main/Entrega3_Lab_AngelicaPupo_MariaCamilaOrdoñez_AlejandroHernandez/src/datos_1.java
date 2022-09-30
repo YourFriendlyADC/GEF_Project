@@ -21,18 +21,43 @@ public class datos_1 extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         this.user = user;
         saludo.setText("Hola, " + user + "!");
-        saludo.setBounds(280, 20, 300, 40);
+        saludo.setBounds(250, 20, 300, 40);
         panel_datos_1.add(saludo);
+        
+        ingrese_la_temperatura.setBounds(40, 100, 180, 30);
+        panel_datos_1.add(ingrese_la_temperatura);
+        temperatura_rango.setBounds(70, 120, 140, 30);
+        panel_datos_1.add(temperatura_rango);
+        temperatura.setBounds(85, 150, 70, 30);
+        panel_datos_1.add(temperatura);
+        
+        separador_1.setBounds(10, 220, 600, 10);
+        panel_datos_1.add(separador_1);
+        
+        ingrese_la_frecuencia.setBounds(420, 280, 180, 30);
+        panel_datos_1.add(ingrese_la_frecuencia);
+        frecuencia_rango.setBounds(460, 300, 100, 30);
+        panel_datos_1.add(frecuencia_rango);
+        frecuencia.setBounds(450, 330, 80, 30);
+        panel_datos_1.add(frecuencia);
+        
+        separador_2.setBounds(10, 430, 600, 10);
+        panel_datos_1.add(separador_2);
+        
+        ingrese_longitud.setBounds(210, 470, 200, 30);
+        panel_datos_1.add(ingrese_longitud);
+        longitud.setBounds(270, 510, 80, 30);
+        panel_datos_1.add(longitud);
+        
+        atras.setBounds(20, 595, 60, 30);
+        panel_datos_1.add(atras);
+        to_datos_2.setBounds(260, 590, 100, 35);
+        panel_datos_1.add(to_datos_2);
         
         this.setTitle("Introducir datos");
         
         ImageIcon img2 = new ImageIcon("images/bee.png");
         setIconImage(img2.getImage());
-//         ImageIcon img = new ImageIcon("images/termometro.png");
-//        JLabel tag2 = new JLabel();
-//        tag2.setBounds(100, 100, 80, 100);
-//        tag2.setIcon(new ImageIcon(img.getImage().getScaledInstance(80, 150, Image.SCALE_SMOOTH)));
-//        panel_datos_1.add(tag2);
 
     }
 
@@ -51,24 +76,26 @@ public class datos_1 extends javax.swing.JFrame {
 
         panel_datos_1 = new javax.swing.JPanel();
         saludo = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        ingrese_la_temperatura = new javax.swing.JLabel();
         temperatura = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        temperatura_rango = new javax.swing.JLabel();
+        ingrese_la_frecuencia = new javax.swing.JLabel();
         frecuencia = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        frecuencia_rango = new javax.swing.JLabel();
         to_datos_2 = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
+        separador_1 = new javax.swing.JSeparator();
         aviso = new javax.swing.JLabel();
         aviso_temp = new javax.swing.JLabel();
         aviso_1 = new javax.swing.JLabel();
         aviso_2 = new javax.swing.JLabel();
         aviso_frec = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jSeparator2 = new javax.swing.JSeparator();
+        ingrese_longitud = new javax.swing.JLabel();
+        longitud = new javax.swing.JComboBox<>();
+        separador_2 = new javax.swing.JSeparator();
         aviso5 = new javax.swing.JLabel();
         atras = new javax.swing.JButton();
+        validacion_temp = new javax.swing.JLabel();
+        validacion_frec = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,10 +107,10 @@ public class datos_1 extends javax.swing.JFrame {
         saludo.setForeground(new java.awt.Color(0, 0, 102));
         saludo.setText("Hola, username!");
 
-        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel2.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel2.setText("Ingrese la temperatura");
+        ingrese_la_temperatura.setBackground(new java.awt.Color(0, 0, 0));
+        ingrese_la_temperatura.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_la_temperatura.setForeground(new java.awt.Color(0, 0, 102));
+        ingrese_la_temperatura.setText("Ingrese la temperatura");
 
         temperatura.setBackground(new java.awt.Color(237, 242, 251));
         temperatura.setForeground(new java.awt.Color(0, 0, 102));
@@ -93,14 +120,14 @@ public class datos_1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel3.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel3.setText("10-37 Grados Celsius");
+        temperatura_rango.setBackground(new java.awt.Color(0, 0, 0));
+        temperatura_rango.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
+        temperatura_rango.setForeground(new java.awt.Color(0, 0, 102));
+        temperatura_rango.setText("10-37 Grados Celsius");
 
-        jLabel4.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel4.setText("Ingrese la frecuencia");
+        ingrese_la_frecuencia.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_la_frecuencia.setForeground(new java.awt.Color(0, 0, 102));
+        ingrese_la_frecuencia.setText("Ingrese la frecuencia");
 
         frecuencia.setBackground(new java.awt.Color(237, 242, 251));
         frecuencia.setForeground(new java.awt.Color(0, 0, 102));
@@ -110,11 +137,12 @@ public class datos_1 extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel5.setText("20-2000 Hz");
+        frecuencia_rango.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
+        frecuencia_rango.setForeground(new java.awt.Color(0, 0, 102));
+        frecuencia_rango.setText("20-2000 Hz");
 
         to_datos_2.setBackground(new java.awt.Color(118, 158, 219));
+        to_datos_2.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
         to_datos_2.setForeground(new java.awt.Color(255, 255, 255));
         to_datos_2.setText("Introducir");
         to_datos_2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,8 +151,8 @@ public class datos_1 extends javax.swing.JFrame {
             }
         });
 
-        jSeparator1.setBackground(new java.awt.Color(51, 153, 255));
-        jSeparator1.setForeground(new java.awt.Color(0, 102, 255));
+        separador_1.setBackground(new java.awt.Color(51, 153, 255));
+        separador_1.setForeground(new java.awt.Color(0, 102, 255));
 
         aviso.setBackground(new java.awt.Color(255, 51, 51));
         aviso.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -133,24 +161,25 @@ public class datos_1 extends javax.swing.JFrame {
 
         aviso_frec.setForeground(new java.awt.Color(204, 0, 51));
 
-        jLabel7.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 102));
-        jLabel7.setText("Inserte Longitud de Onda");
+        ingrese_longitud.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_longitud.setForeground(new java.awt.Color(0, 0, 102));
+        ingrese_longitud.setText("Ingrese Longitud de Onda");
 
-        jComboBox1.setBackground(new java.awt.Color(204, 204, 204));
-        jComboBox1.setEditable(true);
-        jComboBox1.setForeground(new java.awt.Color(51, 51, 51));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.1 x 10^-8", "0.2 x 10^-8", "0.3 x 10^-8", "0.4 x 10^-8", "0.5 x 10^-8", "0.6 x 10^-8", "0.7 x 10^-8", "0.8 x 10^-8", "0.9 x 10^-8", "1 x 10^-8", "1.1 x 10^-8", "1.2 x 10^-8", "1.3 x 10^-8", "1.4 x 10^-8", "1.5 x 10^-8", "1.6 x 10^-8", "1.7 x 10^-8", "1.8 x 10^-8", "1.9 x 10^-8", "2 x 10^-8" }));
-        jComboBox1.setAutoscrolls(true);
-        jComboBox1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 204), 1, true));
-        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jComboBox1.setName("Rango"); // NOI18N
-        jComboBox1.setOpaque(true);
+        longitud.setBackground(new java.awt.Color(204, 204, 204));
+        longitud.setEditable(true);
+        longitud.setForeground(new java.awt.Color(51, 51, 51));
+        longitud.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "0.1 x 10^-8", "0.2 x 10^-8", "0.3 x 10^-8", "0.4 x 10^-8", "0.5 x 10^-8", "0.6 x 10^-8", "0.7 x 10^-8", "0.8 x 10^-8", "0.9 x 10^-8", "1 x 10^-8", "1.1 x 10^-8", "1.2 x 10^-8", "1.3 x 10^-8", "1.4 x 10^-8", "1.5 x 10^-8", "1.6 x 10^-8", "1.7 x 10^-8", "1.8 x 10^-8", "1.9 x 10^-8", "2 x 10^-8" }));
+        longitud.setAutoscrolls(true);
+        longitud.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 204), 1, true));
+        longitud.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        longitud.setName("Rango"); // NOI18N
+        longitud.setOpaque(true);
 
-        jSeparator2.setBackground(new java.awt.Color(51, 153, 255));
-        jSeparator2.setForeground(new java.awt.Color(0, 102, 255));
+        separador_2.setBackground(new java.awt.Color(51, 153, 255));
+        separador_2.setForeground(new java.awt.Color(0, 102, 255));
 
         atras.setBackground(new java.awt.Color(118, 158, 219));
+        atras.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
         atras.setForeground(new java.awt.Color(255, 255, 255));
         atras.setText("Atrás");
         atras.addActionListener(new java.awt.event.ActionListener() {
@@ -159,14 +188,16 @@ public class datos_1 extends javax.swing.JFrame {
             }
         });
 
+        validacion_temp.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
+        validacion_temp.setForeground(new java.awt.Color(255, 0, 0));
+
+        validacion_frec.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
+        validacion_frec.setForeground(new java.awt.Color(255, 0, 51));
+
         javax.swing.GroupLayout panel_datos_1Layout = new javax.swing.GroupLayout(panel_datos_1);
         panel_datos_1.setLayout(panel_datos_1Layout);
         panel_datos_1Layout.setHorizontalGroup(
             panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_datos_1Layout.createSequentialGroup()
-                .addGap(70, 70, 70)
-                .addComponent(aviso_frec, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,10 +206,12 @@ public class datos_1 extends javax.swing.JFrame {
                         .addGap(201, 201, 201))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                         .addComponent(aviso_temp, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(91, 91, 91))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(validacion_temp)
+                        .addGap(154, 154, 154))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                         .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(longitud, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panel_datos_1Layout.createSequentialGroup()
                                 .addComponent(atras)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -190,98 +223,116 @@ public class datos_1 extends javax.swing.JFrame {
                         .addGap(406, 406, 406)
                         .addComponent(aviso_1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(frecuencia)))
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(jLabel5))
-                    .addGroup(panel_datos_1Layout.createSequentialGroup()
                         .addGap(211, 211, 211)
-                        .addComponent(jLabel7)))
+                        .addComponent(ingrese_longitud)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jSeparator2)
-            .addComponent(jSeparator1)
-            .addGroup(panel_datos_1Layout.createSequentialGroup()
+            .addComponent(separador_2)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(saludo)
-                    .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(panel_datos_1Layout.createSequentialGroup()
-                            .addGap(270, 270, 270)
-                            .addComponent(aviso, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(panel_datos_1Layout.createSequentialGroup()
-                            .addGap(60, 60, 60)
-                            .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(aviso, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
+                        .addComponent(ingrese_la_temperatura)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(312, 312, 312))
+            .addGroup(panel_datos_1Layout.createSequentialGroup()
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(temperatura))
-                        .addGap(46, 46, 46))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(80, 80, 80))))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(ingrese_la_frecuencia))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(85, 85, 85)
+                                .addComponent(validacion_frec)
+                                .addGap(338, 338, 338)
+                                .addComponent(aviso_frec, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(frecuencia_rango)))
+                    .addComponent(separador_1, javax.swing.GroupLayout.PREFERRED_SIZE, 619, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(temperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(temperatura_rango)))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addGap(176, 176, 176)
+                        .addComponent(saludo)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panel_datos_1Layout.setVerticalGroup(
             panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_datos_1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(saludo)
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(saludo)
-                        .addGap(142, 142, 142)
-                        .addComponent(aviso))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addGap(10, 10, 10)
-                        .addComponent(temperatura, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addComponent(ingrese_la_temperatura)
+                        .addGap(18, 18, 18)
+                        .addComponent(temperatura_rango)
+                        .addGap(15, 15, 15)))
+                .addComponent(aviso)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(aviso_temp)
-                .addGap(40, 40, 40)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
-                .addGap(12, 12, 12)
-                .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(aviso_frec)
-                .addGap(70, 70, 70)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aviso_1)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(105, 105, 105)
-                        .addComponent(aviso_2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(38, 38, 38)
+                        .addComponent(validacion_temp)
+                        .addGap(30, 30, 30)
+                        .addComponent(separador_1, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(47, 47, 47)
+                        .addComponent(ingrese_la_frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(aviso_frec))
+                            .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                .addComponent(frecuencia_rango)
+                                .addGap(18, 18, 18)
+                                .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(21, 21, 21)
+                        .addComponent(validacion_frec)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(separador_2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ingrese_longitud)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(aviso_1)
+                            .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                .addComponent(longitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(47, 47, 47)
+                                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(atras))
+                                .addGap(93, 93, 93)
+                                .addComponent(aviso_2)))
+                        .addContainerGap(12, Short.MAX_VALUE))
+                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(temperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_datos_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panel_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, 620, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -289,8 +340,8 @@ public class datos_1 extends javax.swing.JFrame {
 
     private void to_datos_2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to_datos_2ActionPerformed
         datos_2 d_2 = new datos_2();
-        int temp, frec, piLimit = 1000, piD = 1, signo = 1, piSum = 0, piInt;
-        double densidad, r = 286.9, p = 101325, k, pi; // p: 1 atm a pascales, r:  Constante individual del gas, k: numero de ondas
+        int temp, frec;
+        double densidad, r = 286.9, p = 101325, k; // p: 1 atm a pascales, r:  Constante individual del gas, k: numero de ondas
         boolean pass_t = false, pass_f = false;
         String density = "";
 
@@ -298,44 +349,33 @@ public class datos_1 extends javax.swing.JFrame {
         temp = Integer.parseInt(temperatura.getText());
         densidad = p / (r * (temp + 273.15));
         density = Double.toString(densidad);
-        System.out.println(density);
 
         // Velocidad de sonido
         double rv = 331.4;
         rv = rv + (temp * 0.6);
-        System.out.println("rv " + rv);
 
         // Validación Temperature
         if (temp > 9 && temp < 38) {
             pass_t = true;
         } else {
-            aviso_temp.setText("Digite un valor entre el rango indicado.");
-            aviso_temp.setBounds(400, 220, 300, 20);
-            aviso_temp.setBackground(Color.RED);
-            panel_datos_1.add(aviso_temp);
+            validacion_temp.setText("Digite un valor entre el rango indicado.");
+            validacion_temp.setBounds(30, 190, 300, 20);            
+            panel_datos_1.add(validacion_temp);
         }
 
         // Frecuency
         frec = Integer.parseInt(frecuencia.getText());
 
         // Número de ondas
-        for (int i = 1; i <= piLimit; i++) {
-            piInt = 1 / piD * signo;
-            piSum = piSum + piInt;
-            piD = piD + 2;
-            signo = signo * -1;
-        }
-        pi = piSum * 4;
-        k = (2 * pi * frec) / rv;
+        k = (2 * pi() * frec) / rv;
 
         // Validación Frecuencia
-        if (frec > 19 && frec < 2001) {            
+        if (frec > 19 && frec < 2001) {          
             pass_f = true;
         } else {
-            aviso_frec.setText("Digite un valor entre el rango indicado.");
-            aviso_frec.setBounds(30, 375, 300, 20);
-            aviso_frec.setBackground(Color.RED);
-            panel_datos_1.add(aviso_frec);
+            validacion_frec.setText("Digite un valor entre el rango indicado.");
+            validacion_frec.setBounds(400, 370, 300, 20);
+            panel_datos_1.add(validacion_frec);
         }
         
         // Validacion de ambos
@@ -362,18 +402,6 @@ public class datos_1 extends javax.swing.JFrame {
         panel_menu.setVisible(true);
     }//GEN-LAST:event_atrasActionPerformed
 
-//                        System.out.print("Digite la temperatura (10-37) Grados Celsius: ");
-//                        usuario[i][j] = Integer.toString(temp = sc.nextInt());
-//                        while (temp < 10 || temp > 37) {
-//                            System.out.println("La temperatura debe ser entre 10 y 37 grados: ");
-//                            System.out.print("Digitela de nuevo: ");
-//                            usuario[i][j] = Integer.toString(temp = sc.nextInt());
-//                        System.out.print("Digite la Amplitud de Desplazamiento: ");
-//                        usuario[i][j] = Integer.toString(ampd_desp = sc.nextInt());                       
-//                        break;
-//                        System.out.println("Densidad");
-//                        System.out.println("");
-//                        break;
     /**
      * @param args the command line arguments
      */
@@ -396,28 +424,38 @@ public class datos_1 extends javax.swing.JFrame {
     private javax.swing.JLabel aviso_frec;
     private javax.swing.JLabel aviso_temp;
     private javax.swing.JTextField frecuencia;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel frecuencia_rango;
+    private javax.swing.JLabel ingrese_la_frecuencia;
+    private javax.swing.JLabel ingrese_la_temperatura;
+    private javax.swing.JLabel ingrese_longitud;
+    private javax.swing.JComboBox<String> longitud;
     private javax.swing.JPanel panel_datos_1;
     public static javax.swing.JLabel saludo;
+    private javax.swing.JSeparator separador_1;
+    private javax.swing.JSeparator separador_2;
     private javax.swing.JTextField temperatura;
+    private javax.swing.JLabel temperatura_rango;
     private javax.swing.JButton to_datos_2;
+    private javax.swing.JLabel validacion_frec;
+    private javax.swing.JLabel validacion_temp;
     // End of variables declaration//GEN-END:variables
 
     private static class panel_menu {
-
-        public panel_menu() {
+        public panel_menu() {}
+        private void setVisible(boolean b) {}
+    }
+    
+    public static double pi() {
+        int piLimit = 1000, piD = 1, signo = 1;
+        double pi,  piSum = 0, piInt;
+        for (int i = 1; i <= piLimit; i++) {
+            piInt = (double) 1 / piD * signo;
+            piSum = piSum + piInt;
+            piD = piD + 2;
+            signo = signo * -1;
         }
-
-        private void setVisible(boolean b) {
-            
-        }
+        pi = piSum * 4;        
+        return pi;
     }
 
 //    private static class density {
