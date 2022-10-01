@@ -1,8 +1,11 @@
+
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import java.lang.String;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,7 +17,11 @@ public class menu extends javax.swing.JFrame {
         initComponents();
 
         // Personalización de Ventana
-        
+//        ImageIcon imagen = new ImageIcon("images/bg_4.png");
+//        JLabel img_3 = new JLabel();
+//        img_3.setBounds(0, -10, getWidth(), getHeight());
+//        img_3.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(640, 520, Image.SCALE_SMOOTH)));
+//        panel_menu.add(img_3);
         // Posición
         this.setLocationRelativeTo(null);
         // Imagen de Oído
@@ -26,7 +33,7 @@ public class menu extends javax.swing.JFrame {
         // Título
         this.setTitle("Menú");
         // Icono
-        ImageIcon img_2 = new ImageIcon("images/bee.png");
+        ImageIcon img_2 = new ImageIcon("images/icon_perezoso_5.png");
         setIconImage(img_2.getImage());
         // Items
         ingrese_nombre.setBounds(250, 320, 160, 30);
@@ -61,7 +68,8 @@ public class menu extends javax.swing.JFrame {
         });
 
         to_datos_1.setBackground(new java.awt.Color(118, 158, 219));
-        to_datos_1.setForeground(new java.awt.Color(255, 255, 255));
+        to_datos_1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        to_datos_1.setForeground(new java.awt.Color(0, 0, 153));
         to_datos_1.setText("Entrar");
         to_datos_1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,7 +83,8 @@ public class menu extends javax.swing.JFrame {
         });
 
         salir.setBackground(new java.awt.Color(118, 158, 219));
-        salir.setForeground(new java.awt.Color(255, 255, 255));
+        salir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        salir.setForeground(new java.awt.Color(0, 0, 153));
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +112,8 @@ public class menu extends javax.swing.JFrame {
         ingrese_nombre.setText("Ingrese su nombre ");
 
         archivos.setBackground(new java.awt.Color(118, 158, 219));
-        archivos.setForeground(new java.awt.Color(255, 255, 255));
+        archivos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        archivos.setForeground(new java.awt.Color(0, 0, 153));
         archivos.setText("Archivos");
 
         aviso_nombre.setForeground(new java.awt.Color(255, 0, 51));
@@ -289,8 +299,8 @@ public class menu extends javax.swing.JFrame {
                 pase = true;
             }
         } else {
-            if (user.length() > 2){
-                while (pase == false && i < user.length()){                   
+            if (user.length() > 2) {
+                while (pase == false && i < user.length()) {
                     if (user.substring(i, i + 1) != "") {
                         pase = true;
                     }

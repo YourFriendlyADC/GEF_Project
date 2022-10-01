@@ -23,7 +23,7 @@ public class datos_2 extends javax.swing.JFrame {
 //        dns2.setText(men.densidad);
         this.setTitle("Muestra de datos");
         
-        ImageIcon img2 = new ImageIcon("images/bee.png");
+        ImageIcon img2 = new ImageIcon("images/icon_perezoso_2.png");
         setIconImage(img2.getImage());
     }
 
@@ -166,7 +166,7 @@ public class datos_2 extends javax.swing.JFrame {
     private javax.swing.JLabel temp;
     // End of variables declaration//GEN-END:variables
 
-    private void setText(String temperatura) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+//    private void setText(String temperatura) {
+//        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+//    }
 }

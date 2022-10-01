@@ -20,6 +20,9 @@ public class datos_1 extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.user = user;
+        String user_c;
+        user_c = user.substring(0, 1).toUpperCase();
+        user = user_c + user.substring(1, user.length());
         saludo.setText("Hola, " + user + "!");
         saludo.setBounds(250, 20, 300, 40);
         panel_datos_1.add(saludo);
@@ -56,12 +59,12 @@ public class datos_1 extends javax.swing.JFrame {
         
         this.setTitle("Introducir datos");
         
-        ImageIcon img2 = new ImageIcon("images/bee.png");
+        ImageIcon img2 = new ImageIcon("images/icon_perezoso_1.png");
         setIconImage(img2.getImage());
 
     }
 
-    private datos_1() {
+    private datos_1() { // This works actually. Don't delete.
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -214,8 +217,9 @@ public class datos_1 extends javax.swing.JFrame {
                             .addComponent(longitud, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panel_datos_1Layout.createSequentialGroup()
                                 .addComponent(atras)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(195, 195, 195)
+                                .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(272, 272, 272))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_1Layout.createSequentialGroup()
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -275,13 +279,13 @@ public class datos_1 extends javax.swing.JFrame {
                         .addComponent(aviso5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(ingrese_la_temperatura)
                         .addGap(18, 18, 18)
                         .addComponent(temperatura_rango)
                         .addGap(15, 15, 15)))
                 .addComponent(aviso)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addComponent(aviso_temp)
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
@@ -302,7 +306,7 @@ public class datos_1 extends javax.swing.JFrame {
                                 .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(21, 21, 21)
                         .addComponent(validacion_frec)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addComponent(separador_2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ingrese_longitud)
@@ -310,14 +314,17 @@ public class datos_1 extends javax.swing.JFrame {
                         .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(aviso_1)
                             .addGroup(panel_datos_1Layout.createSequentialGroup()
-                                .addComponent(longitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(47, 47, 47)
-                                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(atras))
-                                .addGap(93, 93, 93)
+                                .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                        .addComponent(longitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(51, 51, 51)
+                                        .addComponent(atras))
+                                    .addGroup(panel_datos_1Layout.createSequentialGroup()
+                                        .addGap(82, 82, 82)
+                                        .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(80, 80, 80)
                                 .addComponent(aviso_2)))
-                        .addContainerGap(12, Short.MAX_VALUE))
+                        .addContainerGap(13, Short.MAX_VALUE))
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(temperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -332,7 +339,7 @@ public class datos_1 extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_datos_1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panel_datos_1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -351,8 +358,8 @@ public class datos_1 extends javax.swing.JFrame {
         density = Double.toString(densidad);
 
         // Velocidad de sonido
-        double rv = 331.4;
-        rv = rv + (temp * 0.6);
+        double vs = 331.4;
+        vs = vs + (temp * 0.6);
 
         // Validación Temperature
         if (temp > 9 && temp < 38) {
@@ -367,7 +374,7 @@ public class datos_1 extends javax.swing.JFrame {
         frec = Integer.parseInt(frecuencia.getText());
 
         // Número de ondas
-        k = (2 * pi() * frec) / rv;
+        k = (2 * pi() * frec) / vs;
 
         // Validación Frecuencia
         if (frec > 19 && frec < 2001) {          
