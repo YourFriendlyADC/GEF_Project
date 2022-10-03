@@ -15,16 +15,13 @@ public class datos_2 extends javax.swing.JFrame {
      */
     public datos_2() {
         initComponents();
-        this.setLocationRelativeTo(null);
+        personalizacion_ventana();
 //        this.density = density;
 //        temp.setText(density);
         //panel_datos_2.add(density);
 //        datos_1 men = new datos_1();
 //        dns2.setText(men.densidad);
-        this.setTitle("Muestra de datos");
         
-        ImageIcon img2 = new ImageIcon("images/icon_perezoso_2.png");
-        setIconImage(img2.getImage());
     }
 
     /**
@@ -40,24 +37,27 @@ public class datos_2 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         temp = new javax.swing.JLabel();
-        dns2 = new javax.swing.JTextField();
         atras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         panel_datos_2.setBackground(new java.awt.Color(215, 227, 252));
 
-        jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("DATOS 2");
 
-        jLabel3.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 153));
         jLabel3.setText("Densidad: ");
 
-        temp.setFont(new java.awt.Font("Sitka Display", 0, 14)); // NOI18N
+        temp.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
+        temp.setForeground(new java.awt.Color(0, 0, 153));
         temp.setText("density");
 
         atras.setBackground(new java.awt.Color(118, 158, 219));
-        atras.setForeground(new java.awt.Color(255, 255, 255));
+        atras.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        atras.setForeground(new java.awt.Color(0, 0, 153));
         atras.setText("Inicio");
         atras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,10 +78,8 @@ public class datos_2 extends javax.swing.JFrame {
                         .addGap(55, 55, 55)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
-                        .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(182, Short.MAX_VALUE))
+                        .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(289, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_datos_2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(atras, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -92,12 +90,11 @@ public class datos_2 extends javax.swing.JFrame {
             .addGroup(panel_datos_2Layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addComponent(jLabel1)
-                .addGap(168, 168, 168)
+                .addGap(173, 173, 173)
                 .addGroup(panel_datos_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(temp, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dns2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 163, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
                 .addComponent(atras)
                 .addGap(18, 18, 18))
         );
@@ -159,13 +156,19 @@ public class datos_2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton atras;
-    private javax.swing.JTextField dns2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel panel_datos_2;
     private javax.swing.JLabel temp;
     // End of variables declaration//GEN-END:variables
 
+    public void personalizacion_ventana() {
+        // Posición, título e icono
+        this.setLocationRelativeTo(null);
+        this.setTitle("Muestra de datos");
+        ImageIcon img2 = new ImageIcon("images/icon_perezoso_3.png");
+        setIconImage(img2.getImage());
+    }
 //    private void setText(String temperatura) {
 //        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
 //    }

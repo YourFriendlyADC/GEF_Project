@@ -8,40 +8,20 @@ import java.lang.String;
 import javax.swing.JPanel;
 
 /**
- *
+ * Victor es el nombre de mi papá, pusieron la laptop a su nombre
  * @author Victor1
  */
 public class menu extends javax.swing.JFrame {
 
     public menu() {
         initComponents();
-
-        // Personalización de Ventana
+        personalizacion_ventana();
 //        ImageIcon imagen = new ImageIcon("images/bg_4.png");
 //        JLabel img_3 = new JLabel();
 //        img_3.setBounds(0, -10, getWidth(), getHeight());
 //        img_3.setIcon(new ImageIcon(imagen.getImage().getScaledInstance(640, 520, Image.SCALE_SMOOTH)));
 //        panel_menu.add(img_3);
-        // Posición
-        this.setLocationRelativeTo(null);
-        // Imagen de Oído
-        ImageIcon img = new ImageIcon("images/perezoso.png");
-        JLabel icon = new JLabel();
-        icon.setBounds(190, -60, 500, 500);
-        icon.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
-        panel_menu.add(icon);
-        // Título
-        this.setTitle("Menú");
-        // Icono
-        ImageIcon img_2 = new ImageIcon("images/icon_perezoso_5.png");
-        setIconImage(img_2.getImage());
-        // Items
-        ingrese_nombre.setBounds(250, 320, 160, 30);
-        panel_menu.add(ingrese_nombre);
-        usuario.setBounds(240, 350, 165, 30);
-        panel_menu.add(usuario);
-        to_datos_1.setBounds(285, 390, 80, 30);
-        panel_menu.add(to_datos_1);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -68,7 +48,7 @@ public class menu extends javax.swing.JFrame {
         });
 
         to_datos_1.setBackground(new java.awt.Color(118, 158, 219));
-        to_datos_1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        to_datos_1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         to_datos_1.setForeground(new java.awt.Color(0, 0, 153));
         to_datos_1.setText("Entrar");
         to_datos_1.addActionListener(new java.awt.event.ActionListener() {
@@ -83,7 +63,7 @@ public class menu extends javax.swing.JFrame {
         });
 
         salir.setBackground(new java.awt.Color(118, 158, 219));
-        salir.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        salir.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         salir.setForeground(new java.awt.Color(0, 0, 153));
         salir.setText("Salir");
         salir.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +73,7 @@ public class menu extends javax.swing.JFrame {
         });
 
         usuario.setBackground(new java.awt.Color(241, 244, 251));
+        usuario.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         usuario.setForeground(new java.awt.Color(0, 0, 102));
         usuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(67, 30, 16), 1, true));
         usuario.addActionListener(new java.awt.event.ActionListener() {
@@ -102,19 +83,24 @@ public class menu extends javax.swing.JFrame {
         });
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setFont(new java.awt.Font("Sitka Display", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 102));
         jLabel1.setText("Title TBC");
 
         ingrese_nombre.setBackground(new java.awt.Color(0, 0, 0));
-        ingrese_nombre.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_nombre.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         ingrese_nombre.setForeground(new java.awt.Color(0, 0, 102));
         ingrese_nombre.setText("Ingrese su nombre ");
 
         archivos.setBackground(new java.awt.Color(118, 158, 219));
-        archivos.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        archivos.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
         archivos.setForeground(new java.awt.Color(0, 0, 153));
         archivos.setText("Archivos");
+        archivos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                archivosActionPerformed(evt);
+            }
+        });
 
         aviso_nombre.setForeground(new java.awt.Color(255, 0, 51));
 
@@ -158,7 +144,7 @@ public class menu extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel_menuLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 244, Short.MAX_VALUE)
                 .addComponent(ingrese_nombre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,6 +185,7 @@ public class menu extends javax.swing.JFrame {
     private void to_datos_1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_to_datos_1ActionPerformed
         datos_1 d_1 = new datos_1(usuario.getText());
         String user = usuario.getText();
+        System.out.println(user);
         if (validacion_nombre(user) == false) {
             aviso_nombre.setText("Digite un nombre.");
             aviso_nombre.setBounds(277, 430, 100, 20);
@@ -212,15 +199,15 @@ public class menu extends javax.swing.JFrame {
     }//GEN-LAST:event_to_datos_1ActionPerformed
 
     private void usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioActionPerformed
-        int n = 1;
-        String users[][] = new String[5][100];
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == 0) {
-                    users[i][j] = usuario.getText();
-                }
-            }
-        }
+//        int n = 1;
+//        String users[][] = new String[5][100];
+//        for (int i = 0; i < 5; i++) {
+//            for (int j = 0; j < n; j++) {
+//                if (i == 0) {
+//                    users[i][j] = usuario.getText();
+//                }
+//            }
+//        }
     }//GEN-LAST:event_usuarioActionPerformed
 
     private void panel_menuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panel_menuMouseEntered
@@ -230,6 +217,8 @@ public class menu extends javax.swing.JFrame {
     private void to_datos_1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_to_datos_1KeyPressed
         datos_1 d_1 = new datos_1(usuario.getText());
         String user = usuario.getText();
+        if (user.length() == 0)
+            user = "  ";
         if (validacion_nombre(user) == false) {
             aviso_nombre.setText("Digite un nombre.");
             aviso_nombre.setBounds(277, 410, 100, 20);
@@ -241,6 +230,12 @@ public class menu extends javax.swing.JFrame {
             d_1.setVisible(true);
         }
     }//GEN-LAST:event_to_datos_1KeyPressed
+
+    private void archivosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_archivosActionPerformed
+        this.dispose();
+        archivos archs = new archivos();
+        archs.setVisible(true);
+    }//GEN-LAST:event_archivosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -292,16 +287,13 @@ public class menu extends javax.swing.JFrame {
     public static boolean validacion_nombre(String user) {
         boolean pase = false;
         int i = 0;
+        System.out.println(user);
         if (user.length() < 3) {
-            if ("".equals(user) || " ".equals(user)) {
-                pase = false;
-            } else {
-                pase = true;
-            }
+            pase = !("".equals(user) || " ".equals(user));
         } else {
             if (user.length() > 2) {
                 while (pase == false && i < user.length()) {
-                    if (user.substring(i, i + 1) != "") {
+                    if (!"".equals(user.substring(i, i + 1))) {
                         pase = true;
                     }
                     i++;
@@ -314,5 +306,26 @@ public class menu extends javax.swing.JFrame {
     public static boolean validacion_vulgaridad(String user) {
         boolean groseria = false;
         return groseria;
+    }
+    
+    public void personalizacion_ventana(){
+        // Posición, título e icono de ventana
+        this.setLocationRelativeTo(null);
+        this.setTitle("Menú");
+        ImageIcon img_2 = new ImageIcon("images/icon_perezoso_1.png");
+        setIconImage(img_2.getImage());
+        // Imagen central
+        ImageIcon img = new ImageIcon("images/perezoso.png");
+        JLabel icon = new JLabel();
+        icon.setBounds(190, -60, 500, 500);
+        icon.setIcon(new ImageIcon(img.getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
+        panel_menu.add(icon);           
+        // Items
+        ingrese_nombre.setBounds(265, 320, 160, 30);
+        panel_menu.add(ingrese_nombre);
+        usuario.setBounds(240, 350, 165, 30);
+        panel_menu.add(usuario);
+        to_datos_1.setBounds(285, 390, 80, 30);
+        panel_menu.add(to_datos_1);
     }
 }

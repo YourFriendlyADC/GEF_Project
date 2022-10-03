@@ -19,49 +19,15 @@ public class datos_1 extends javax.swing.JFrame {
     public datos_1(String user) {
         initComponents();
         this.setLocationRelativeTo(null);
+        // Hola Usuario
         this.user = user;
         String user_c;
         user_c = user.substring(0, 1).toUpperCase();
         user = user_c + user.substring(1, user.length());
         saludo.setText("Hola, " + user + "!");
-        saludo.setBounds(250, 20, 300, 40);
+        saludo.setBounds(280 - 5 * user.length(), 20, 300, 40);
         panel_datos_1.add(saludo);
-        
-        ingrese_la_temperatura.setBounds(40, 100, 180, 30);
-        panel_datos_1.add(ingrese_la_temperatura);
-        temperatura_rango.setBounds(70, 120, 140, 30);
-        panel_datos_1.add(temperatura_rango);
-        temperatura.setBounds(85, 150, 70, 30);
-        panel_datos_1.add(temperatura);
-        
-        separador_1.setBounds(10, 220, 600, 10);
-        panel_datos_1.add(separador_1);
-        
-        ingrese_la_frecuencia.setBounds(420, 280, 180, 30);
-        panel_datos_1.add(ingrese_la_frecuencia);
-        frecuencia_rango.setBounds(460, 300, 100, 30);
-        panel_datos_1.add(frecuencia_rango);
-        frecuencia.setBounds(450, 330, 80, 30);
-        panel_datos_1.add(frecuencia);
-        
-        separador_2.setBounds(10, 430, 600, 10);
-        panel_datos_1.add(separador_2);
-        
-        ingrese_longitud.setBounds(210, 470, 200, 30);
-        panel_datos_1.add(ingrese_longitud);
-        longitud.setBounds(270, 510, 80, 30);
-        panel_datos_1.add(longitud);
-        
-        atras.setBounds(20, 595, 60, 30);
-        panel_datos_1.add(atras);
-        to_datos_2.setBounds(260, 590, 100, 35);
-        panel_datos_1.add(to_datos_2);
-        
-        this.setTitle("Introducir datos");
-        
-        ImageIcon img2 = new ImageIcon("images/icon_perezoso_1.png");
-        setIconImage(img2.getImage());
-
+        personalizacion_ventana();
     }
 
     private datos_1() { // This works actually. Don't delete.
@@ -106,12 +72,12 @@ public class datos_1 extends javax.swing.JFrame {
         panel_datos_1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         saludo.setBackground(new java.awt.Color(0, 0, 0));
-        saludo.setFont(new java.awt.Font("Sitka Display", 1, 24)); // NOI18N
+        saludo.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 18)); // NOI18N
         saludo.setForeground(new java.awt.Color(0, 0, 102));
         saludo.setText("Hola, username!");
 
         ingrese_la_temperatura.setBackground(new java.awt.Color(0, 0, 0));
-        ingrese_la_temperatura.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_la_temperatura.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         ingrese_la_temperatura.setForeground(new java.awt.Color(0, 0, 102));
         ingrese_la_temperatura.setText("Ingrese la temperatura");
 
@@ -124,11 +90,11 @@ public class datos_1 extends javax.swing.JFrame {
         });
 
         temperatura_rango.setBackground(new java.awt.Color(0, 0, 0));
-        temperatura_rango.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
+        temperatura_rango.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 10)); // NOI18N
         temperatura_rango.setForeground(new java.awt.Color(0, 0, 102));
         temperatura_rango.setText("10-37 Grados Celsius");
 
-        ingrese_la_frecuencia.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_la_frecuencia.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         ingrese_la_frecuencia.setForeground(new java.awt.Color(0, 0, 102));
         ingrese_la_frecuencia.setText("Ingrese la frecuencia");
 
@@ -140,13 +106,13 @@ public class datos_1 extends javax.swing.JFrame {
             }
         });
 
-        frecuencia_rango.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
+        frecuencia_rango.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 10)); // NOI18N
         frecuencia_rango.setForeground(new java.awt.Color(0, 0, 102));
         frecuencia_rango.setText("20-2000 Hz");
 
         to_datos_2.setBackground(new java.awt.Color(118, 158, 219));
-        to_datos_2.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
-        to_datos_2.setForeground(new java.awt.Color(255, 255, 255));
+        to_datos_2.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        to_datos_2.setForeground(new java.awt.Color(0, 0, 153));
         to_datos_2.setText("Introducir");
         to_datos_2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,7 +130,7 @@ public class datos_1 extends javax.swing.JFrame {
 
         aviso_frec.setForeground(new java.awt.Color(204, 0, 51));
 
-        ingrese_longitud.setFont(new java.awt.Font("Sitka Display", 1, 18)); // NOI18N
+        ingrese_longitud.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 14)); // NOI18N
         ingrese_longitud.setForeground(new java.awt.Color(0, 0, 102));
         ingrese_longitud.setText("Ingrese Longitud de Onda");
 
@@ -182,8 +148,8 @@ public class datos_1 extends javax.swing.JFrame {
         separador_2.setForeground(new java.awt.Color(0, 102, 255));
 
         atras.setBackground(new java.awt.Color(118, 158, 219));
-        atras.setFont(new java.awt.Font("Sitka Display", 1, 12)); // NOI18N
-        atras.setForeground(new java.awt.Color(255, 255, 255));
+        atras.setFont(new java.awt.Font("Microsoft YaHei UI", 1, 12)); // NOI18N
+        atras.setForeground(new java.awt.Color(0, 0, 153));
         atras.setText("Atrás");
         atras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -285,7 +251,7 @@ public class datos_1 extends javax.swing.JFrame {
                         .addComponent(temperatura_rango)
                         .addGap(15, 15, 15)))
                 .addComponent(aviso)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addComponent(aviso_temp)
                 .addGroup(panel_datos_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
@@ -306,7 +272,7 @@ public class datos_1 extends javax.swing.JFrame {
                                 .addComponent(frecuencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(21, 21, 21)
                         .addComponent(validacion_frec)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
                         .addComponent(separador_2, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ingrese_longitud)
@@ -324,7 +290,7 @@ public class datos_1 extends javax.swing.JFrame {
                                         .addComponent(to_datos_2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(80, 80, 80)
                                 .addComponent(aviso_2)))
-                        .addContainerGap(13, Short.MAX_VALUE))
+                        .addContainerGap(18, Short.MAX_VALUE))
                     .addGroup(panel_datos_1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(temperatura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -366,7 +332,7 @@ public class datos_1 extends javax.swing.JFrame {
             pass_t = true;
         } else {
             validacion_temp.setText("Digite un valor entre el rango indicado.");
-            validacion_temp.setBounds(30, 190, 300, 20);            
+            validacion_temp.setBounds(30, 190, 300, 20);
             panel_datos_1.add(validacion_temp);
         }
 
@@ -377,14 +343,14 @@ public class datos_1 extends javax.swing.JFrame {
         k = (2 * pi() * frec) / vs;
 
         // Validación Frecuencia
-        if (frec > 19 && frec < 2001) {          
+        if (frec > 19 && frec < 2001) {
             pass_f = true;
         } else {
             validacion_frec.setText("Digite un valor entre el rango indicado.");
             validacion_frec.setBounds(400, 370, 300, 20);
             panel_datos_1.add(validacion_frec);
         }
-        
+
         // Validacion de ambos
         if (pass_t == true & pass_f == true) {
             this.setVisible(false);
@@ -448,21 +414,62 @@ public class datos_1 extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private static class panel_menu {
-        public panel_menu() {}
-        private void setVisible(boolean b) {}
+
+        public panel_menu() {
+        }
+
+        private void setVisible(boolean b) {
+        }
     }
-    
+
     public static double pi() {
         int piLimit = 1000, piD = 1, signo = 1;
-        double pi,  piSum = 0, piInt;
+        double pi, piSum = 0, piInt;
         for (int i = 1; i <= piLimit; i++) {
             piInt = (double) 1 / piD * signo;
             piSum = piSum + piInt;
             piD = piD + 2;
             signo = signo * -1;
         }
-        pi = piSum * 4;        
+        pi = piSum * 4;
         return pi;
+    }
+
+    public void personalizacion_ventana() {
+        ingrese_la_temperatura.setBounds(40, 100, 180, 30);
+        panel_datos_1.add(ingrese_la_temperatura);
+        temperatura_rango.setBounds(70, 120, 140, 30);
+        panel_datos_1.add(temperatura_rango);
+        temperatura.setBounds(85, 150, 70, 30);
+        panel_datos_1.add(temperatura);
+
+        separador_1.setBounds(10, 220, 600, 10);
+        panel_datos_1.add(separador_1);
+
+        ingrese_la_frecuencia.setBounds(420, 280, 180, 30);
+        panel_datos_1.add(ingrese_la_frecuencia);
+        frecuencia_rango.setBounds(465, 300, 100, 30);
+        panel_datos_1.add(frecuencia_rango);
+        frecuencia.setBounds(450, 330, 80, 30);
+        panel_datos_1.add(frecuencia);
+
+        separador_2.setBounds(10, 430, 600, 10);
+        panel_datos_1.add(separador_2);
+
+        ingrese_longitud.setBounds(220, 470, 200, 30);
+        panel_datos_1.add(ingrese_longitud);
+        longitud.setBounds(270, 510, 80, 30);
+        panel_datos_1.add(longitud);
+
+        atras.setBounds(20, 605, 60, 30);
+        panel_datos_1.add(atras);
+        to_datos_2.setBounds(260, 600, 100, 35);
+        panel_datos_1.add(to_datos_2);
+
+        this.setTitle("Introducir datos");
+
+        ImageIcon img2 = new ImageIcon("images/icon_perezoso_2.png");
+        setIconImage(img2.getImage());
     }
 
 //    private static class density {
